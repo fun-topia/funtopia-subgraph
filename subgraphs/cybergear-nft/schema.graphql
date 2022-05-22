@@ -1,0 +1,26 @@
+type CnInfo @entity {
+  id: ID!
+  cnId: BigInt!
+  owner: Bytes!
+  hero: BigInt!
+  rarity: BigInt!
+}
+
+type CnCount @entity {
+  id: ID!
+  total: BigInt!
+  mr: BigInt!
+  ur: BigInt!
+  sr: BigInt!
+  r: BigInt!
+}
+
+type CnCountByOwner @entity {
+  id: ID!
+  owner: Bytes!
+  total: BigInt!
+  mr: BigInt!
+  ur: BigInt!
+  sr: BigInt!
+  r: BigInt!
+}
