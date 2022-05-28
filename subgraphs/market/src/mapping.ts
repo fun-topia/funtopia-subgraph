@@ -9,7 +9,7 @@ const cbAddr = Address.fromString('0xEEa8bD31DA9A2169C38968958B6DF216381B0f08');
 const cnAddr = Address.fromString('0xEEa8bD31DA9A2169C38968958B6DF216381B0f08');
 const csAddr = Address.fromString('0xEEa8bD31DA9A2169C38968958B6DF216381B0f08');
 
-const heroToRarity = [1, 1, 1, 1, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4];
+const heroToRarity = [1, 1, 1, 2, 2, 2, 3, 3, 3, 3, 3, 4, 4, 4, 4];
 
 export function handleBuy(event: Buy): void {
   for (let i = 0; i < event.params.nftIds.length; i++) {

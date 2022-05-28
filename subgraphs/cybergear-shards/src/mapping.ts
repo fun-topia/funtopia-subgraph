@@ -13,7 +13,7 @@ export function handleSpawnCss(event: SpawnCss): void {
       csInfo.csId = event.params.csIds[i];
     }
 
-    const heroToRarity = [1, 1, 1, 1, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4];
+    const heroToRarity = [1, 1, 1, 2, 2, 2, 3, 3, 3, 3, 3, 4, 4, 4, 4];
 
     csInfo.owner = event.params.to;
     csInfo.hero = event.params.heros[i];

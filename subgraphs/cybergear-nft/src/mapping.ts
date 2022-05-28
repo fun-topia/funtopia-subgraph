@@ -12,7 +12,7 @@ export function handleSpawnCn(event: SpawnCn): void {
     cnInfo.cnId = event.params.cnId;
   }
 
-  const heroToRarity = [1, 1, 1, 1, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4];
+  const heroToRarity = [1, 1, 1, 2, 2, 2, 3, 3, 3, 3, 3, 4, 4, 4, 4];
 
   cnInfo.owner = event.params.to;
   cnInfo.hero = event.params.hero;
