@@ -4,7 +4,7 @@
 
 **[Cyber Gear Box](https://thegraph.com/explorer/subgraph/fun-topia/cybergear-box)**: Tracks all Cyber Gear Box.
 
-**[Cyber Gear Shards](https://thegraph.com/explorer/subgraph/fun-topia/cybergear-shards)**: Tracks all Cyber Gear Shards.
+**[Cyber Gear Shards](https://thegraph.com/explorer/subgraph/fun-topia/cyber-gear-shards)**: Tracks all Cyber Gear Shards.
 
 **[Market](https://thegraph.com/explorer/subgraph/fun-topia/market)**: Tracks all NFTs in market.
 
