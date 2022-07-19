@@ -4,7 +4,7 @@ schema:
 dataSources:
   - kind: ethereum/contract
     name: CS
-    network: fuji
+    network: rinkeby
     source:
       address: "0x"
       abi: CS
