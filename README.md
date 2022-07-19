@@ -1,12 +1,12 @@
 ## Subgraphs
 
-**[Cyber Gear NFT](https://thegraph.com/explorer/subgraph/fun-topia/cybergear-nft)**: Tracks all Cyber Gear NFT.
+**[Cyber Gear NFT](https://thegraph.com/studio/subgraph/cybergear-nft/)**: Tracks all Cyber Gear NFT.
 
-**[Cyber Gear Box](https://thegraph.com/explorer/subgraph/fun-topia/cybergear-box)**: Tracks all Cyber Gear Box.
+**[Cyber Gear Box](https://thegraph.com/studio/subgraph/cybergear-box)**: Tracks all Cyber Gear Box.
 
-**[Cyber Gear Shards](https://thegraph.com/explorer/subgraph/fun-topia/cyber-gear-shards)**: Tracks all Cyber Gear Shards.
+**[Cyber Gear Shards](https://thegraph.com/studio/subgraph/cybergear-shards)**: Tracks all Cyber Gear Shards.
 
-**[Market](https://thegraph.com/explorer/subgraph/fun-topia/market)**: Tracks all NFTs in market.
+**[Market](https://thegraph.com/studio/subgraph/funtopia-market)**: Tracks all NFTs in market.
 
 ## Dependencies
 
@@ -27,4 +27,4 @@ npm install -g @graphprotocol/graph-cli
 
 4. Run the `graph build` command to build the subgraph, and check compilation errors before deploying.
 
-5. Run `graph deploy --node https://api.thegraph.com/deploy/ fun-topia/[subgraph]` to deploy the subgraph.
+5. Run `graph deploy --studio [subgraph]` to deploy the subgraph.
