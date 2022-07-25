@@ -6,9 +6,9 @@ dataSources:
     name: CB
     network: rinkeby
     source:
-      address: "0x"
+      address: "0xD44834B07A61D032Fbef14d5Cc0C4585159dD753"
       abi: CB
-      startBlock: 0
+      startBlock: 11056376
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.5

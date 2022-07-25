@@ -2,12 +2,10 @@ import { store, BigInt, Address } from '@graphprotocol/graph-ts'
 import { Market, Buy, Cancel, Sell } from '../generated/Market/Market'
 import { CB } from '../../cybergear-box/generated/CB/CB'
 import { CN } from '../../cybergear-nft/generated/CN/CN'
-import { CS } from '../../cybergear-shards/generated/CS/CS'
 import { BuyInfo, SellInfo, Counter } from '../generated/schema'
 
-const cbAddr = Address.fromString('0xEEa8bD31DA9A2169C38968958B6DF216381B0f08');
-const cnAddr = Address.fromString('0xEEa8bD31DA9A2169C38968958B6DF216381B0f08');
-const csAddr = Address.fromString('0xEEa8bD31DA9A2169C38968958B6DF216381B0f08');
+const cbAddr = Address.fromString('0xD44834B07A61D032Fbef14d5Cc0C4585159dD753');
+const cnAddr = Address.fromString('0x2432e8dD4202C09aF83F7f20b1f09378349179cb');
 
 const heroToRarity = [1, 1, 1, 2, 2, 2, 3, 3, 3, 3, 3, 4, 4, 4, 4];
 
@@ -22,7 +20,6 @@ export function handleBuy(event: Buy): void {
     const market = Market.bind(event.address);
     const cb = CB.bind(cbAddr);
     const cn = CN.bind(cnAddr);
-    const cs = CS.bind(csAddr);
 
     buyInfo.buyer = event.params.buyer;
     buyInfo.seller = event.params.sellers[i];
@@ -40,15 +37,6 @@ export function handleBuy(event: Buy): void {
     if (buyInfo.nft == cnAddr) {
       buyInfo.hero = cn.data(buyInfo.nftId, 'hero');
       buyInfo.rarity = BigInt.fromI32(heroToRarity[buyInfo.hero.toI32() - 1]);
-    }
-
-    if (buyInfo.nft == csAddr) {
-      buyInfo.hero = cs.data(buyInfo.nftId, 'hero');
-      if (buyInfo.hero.equals(BigInt.fromI32(100))) {
-        buyInfo.rarity = BigInt.fromI32(10);
-      } else {
-        buyInfo.rarity = BigInt.fromI32(heroToRarity[buyInfo.hero.toI32() - 1]);
-      }
     }
 
     buyInfo.save();
@@ -104,7 +92,6 @@ export function handleSell(event: Sell): void {
     }
     const cb = CB.bind(cbAddr);
     const cn = CN.bind(cnAddr);
-    const cs = CS.bind(csAddr);
 
     sellInfo.seller = event.params.seller;
     sellInfo.token = event.params.tokens[i];
@@ -118,15 +105,6 @@ export function handleSell(event: Sell): void {
     if (sellInfo.nft == cnAddr) {
       sellInfo.hero = cn.data(sellInfo.nftId, 'hero');
       sellInfo.rarity = BigInt.fromI32(heroToRarity[sellInfo.hero.toI32() - 1]);
-    }
-
-    if (sellInfo.nft == csAddr) {
-      sellInfo.hero = cs.data(sellInfo.nftId, 'hero');
-      if (sellInfo.hero.equals(BigInt.fromI32(100))) {
-        sellInfo.rarity = BigInt.fromI32(10);
-      } else {
-        sellInfo.rarity = BigInt.fromI32(heroToRarity[sellInfo.hero.toI32() - 1]);
-      }
     }
 
     sellInfo.save();
